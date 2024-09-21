@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    </head>
+    
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <h2 class="logo">Sireesha Kuppampati</h2>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero-section">
+    <div class="header-container">
+        <img src="Images/profile.jpg" alt="Profile Image" class="profile-img">
+        <div class="right-section">
+            <h1>Hi, I'm Sireesha Kuppampati</h1>
+            <h2>Full Stack Developer</h2>
+            <div class="btn-group">
+                <!-- Download CV Button -->
+                <a href="SIREESHA K.pdf" class="btn primary-btn" download="Sireesha_Kuppampati_CV.pdf">Download CV</a>
+
+                <!-- Contact Info Button -->
+                <a href="#" class="btn secondary-btn" id="contact-info-btn" onclick="showContactInfo()">Contact Info</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sireesha-kuppampati-69a64022" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/sireeshakuppampati" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Hidden contact info section -->
+            <div id="contact-info" class="contact-info" style="display: none;">
+                <p>Sireesha Kuppampati</p>
+                <p>Email: siriesha.rao@gmail.com</p>
+                <p>Phone: 709-282-8595</p>
+                <p>St. John's, NL</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <h3>EDUCATION</h3>
+        <ul>
+            <li>Master’s degree in Computer Applications (MCA)</li>
+            <li>Bachelor's Degree (B.Sc.) in Computer Science</li>
+            <li>Diploma in Software Development</li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>
+                <strong>Customer Service Manager, Walmart Inc.</strong> (August 2022 - September 2023)
+                <ul>
+                    <li>Oversaw a team of customer service representatives, ensuring prompt and accurate assistance to clients.</li>
+                    <li>Demonstrated integrity and respect while handling sensitive customer issues and escalations.</li>
+                    <li>Developed strong communication and organizational skills, balancing various tasks and priorities.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Customer Service Representative, Walmart</strong> (July 2020 - July 2022)
+                <ul>
+                    <li>Delivered exceptional service to customers by addressing inquiries, providing solutions, and maintaining a high level of professionalism.</li>
+                    <li>Gained experience in thinking through complex situations to provide accurate and timely responses.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Support Sales Associate, KFC</strong> (January 2020)
+                <ul>
+                    <li>Assisted customers with their orders, demonstrating a commitment to working effectively with others.</li>
+                    <li>Showed initiative in taking on new tasks and supporting the team in a fast-paced environment.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Support Analyst, Vintech Systems and Technologies</strong> (June 2008 - October 2010)
+                <ul>
+                    <li>Provided technical support and analysis, ensuring systems operated efficiently.</li>
+                    <li>Conducted investigations and resolved technical issues, showcasing attention to detail and accuracy.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Software Engineer, Vintech Systems and Technologies</strong> (January 2007 - May 2008)
+                <ul>
+                    <li>Developed software applications, utilizing skills in programming and technology to deliver impactful results.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Intern - Vintech Systems and Technologies</strong> (06/2006 - 12/2006)
+                <ul>
+                    <li>Assisted in software development projects and gained hands-on experience in various programming languages and tools.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>TCS BPO Services - Call Center Representative</strong> (01/2006 - 06/2006)
+                <ul>
+                    <li>Provided customer support via inbound and outbound calls, resolving customer issues and providing information about services.</li>
+                    <li>Demonstrated effective communication skills and maintained high levels of customer satisfaction.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <div class="container" id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Creation of e-commerce website using DOM concepts and React.js, Node.js</p>
+            <a href="#view-my-work" class="btn" onclick="showProject1Video()">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Creation of Fullstack application using Node.js, Express, MongoDB, PostgreSQL</p>
+            <a href="#view-my-work" class="btn" onclick="showProject2Video()">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Project 3</h3>
+            <p>Creation of small wildlife of Baltimore Oriole</p>
+            <a href="#view-my-work" class="btn" onclick="showProject3Video()">View Project</a>
+        </div>
+
+        <!-- 'View My Work' Section for displaying videos -->
+        <section id="view-my-work"> 
+            <div id="video-container"></div> <!-- Dynamic video content will load here -->
+        </section>
+    </div>
+
+    <script>
+        function showProject1Video() {
+            const videoContainer = document.getElementById('video-container');
+            videoContainer.innerHTML = `
+                <div class="responsive-iframe">
+                    <iframe src="https://www.youtube.com/embed/HxYaH4PQbe0?si=EB6RaYf06LCTWTY5" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            `;
+        }
+
+        function showProject2Video() {
+            const videoContainer = document.getElementById('video-container');
+            videoContainer.innerHTML = `
+                <div class="responsive-iframe">
+                    <iframe src="https://www.youtube.com/embed/PSnSQEz_2kc?si=9buUib6iA-VmeoFD" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            `;
+        }
+
+        function showProject3Video() {
+            const videoContainer = document.getElementById('video-container');
+            videoContainer.innerHTML = `
+                <div class="responsive-iframe">
+                    <iframe src="https://www.youtube.com/embed/84u0ZIllZGc?si=6O13faO58y2mCgLL" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            `;
+        }
+    </script>
+
+<script>
+    function showContactInfo() {
+        var contactInfo = document.getElementById('contact-info');
+        if (contactInfo.style.display === "none") {
+            contactInfo.style.display = "block"; // Show the contact info
+        } else {
+            contactInfo.style.display = "none"; // Hide the contact info
+        }
+    }
+</script>
+
+
+    <footer>
+        <p>&copy; 2024 Sireesha Kuppampati. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
